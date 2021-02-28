@@ -87,6 +87,127 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+   /* -------------- Base Header - Footer Styles  ---------------- */
+
+
+header, footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.header-divider {
+
+}
+
+header .content-wrapper{
+  display:flex;
+  justify-content:center;
+  align-content: center;
+  flex-flow: row wrap;
+}
+
+header nav{
+  display: flex;
+  flex-basis: 50%;
+  flex-flow: row wrap;
+}
+header nav ul { 
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+/*--------------- Header Styles Ends -------------*/
+
+
+/*--------------- Mobile homepage Styles --------------*/
+
+.hero-area{
+  display:flex;
+  justify-content:center;
+  align-content: center;
+}
+
+aside{
+  display:flex;
+  justify-content:center;
+  align-content: center;
+  flex-flow: row wrap;
+}
+.features {
+  display:flex;
+  justify-content:center;
+  align-content: center;
+}
+
+.fontawesome-icons {
+  display:flex;
+  justify-content:center;
+  align-content: center;
+}
+
+.features-item-description {
+  display:flex;
+  justify-content:center;
+  align-content: center;
+  flex-flow: row wrap;
+}
+
+.reviews {
+  display:flex;
+  justify-content:center;
+  align-content: center;
+  flex-flow: row wrap;
+}
+
+/*----------- General Footer Styles ---------*/
+
+.general-contact{
+  display:flex;
+  justify-content:center;
+  flex-flow: column;
+  align-content: center;
+}
+
+.social-icons{
+  display:flex;
+  justify-content:center;
+  align-content: center;
+}
+/*----------- Mobile About Page Styles ----------*/
+
+.mission {
+  display:flex;
+  justify-content:center;
+  align-content: center;
+  flex-flow: row wrap;
+}
+
+.mission-contact {
+  display:flex;
+  justify-content:center;
+  align-content: center;
+  flex-flow: row wrap;
+}
+
+/*----------- Mobile FAQ Page Styles -----------*/
+main .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.questions {
+  display:flex;
+  justify-content:center;
+  align-content: center;
+  flex-flow: row wrap;
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
