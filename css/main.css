@@ -13,7 +13,7 @@
 
 html {
   color: #222;
-  font-size: 1em;
+  font-size: 16px;
   line-height: 1.4;
 }
 
@@ -349,6 +349,7 @@ aside{
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
 /*------Tablet Styles Here--------*/
 
 @media only screen and (min-width: 768px) {
@@ -416,12 +417,25 @@ aside{
       width: 50%;
   }
 /*Reviews*/
-  .reviews article {
+  .content-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-flow: row;
+    margin-top: 0;
+  }
+  .reviews h1 {
+    width: 100%;
+    padding-left: 60px;
+  }
+
+  .reviews img {
+    width: 300px;
+    height: 400px;
   }
   .reviews article div {
-    width: 50%;
+    width: 60%;
+    margin: 50px;
   }
   .reviews article p {
     margin: 0;
@@ -449,9 +463,11 @@ aside{
     align-items: flex-end;
     width: 100%;
   }
+
   /* ==========================================================================
    About Page
    ========================================================================== */
+
 .mission .content-wrapper {
   display:flex;
   justify-content: space-between;
@@ -488,6 +504,7 @@ aside{
   /* ==========================================================================
    FAQ Page
    ========================================================================== */
+
 .faq-wrapper {
   display: flex;
   justify-content: center;
@@ -501,13 +518,198 @@ aside{
   flex-flow: column wrap;
   flex-basis: 50%;
 }
-  
 
 }
 
-
 /*-------Desktop Styles Here--------*/
+
 @media only screen and (min-width: 1200px) {
+
+  .content-wrapper{
+    max-width: 1000px;
+    margin: 100px 0;
+  }
+
+/* ==========================================================================
+   HomePage
+   ========================================================================== */
+
+  header .content-wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    }
+
+  header {
+    justify-content:space-around;
+    padding: 5px 0;
+    }
+    
+  header nav {
+    width: 15%;
+    }
+
+  header nav ul {
+    justify-content: space-between;
+    }
+
+  .header-divider {
+    display: none;
+    }
+
+  /*Hero Area*/
+
+  .hero-area {
+    margin: 10px 0;
+    padding: 0 0 150px 100px;
+    text-align: left;
+    width: 60%;
+  }
+
+  /*Aside*/
+
+    aside .content-wrapper {
+      margin: 20px 0;
+      display: flex;
+      justify-content: space-evenly;
+      flex-flow:row;
+  }
+    aside .content-wrapper .form-description, 
+    aside .content-wrapper .form{
+      width: 35%;
+      margin: 0px;
+  }
+
+    aside .content-wrapper .form {
+      display: flex;
+      justify-content: center;
+      flex-flow: column wrap;
+      padding: 10px;
+  }
+
+  /*Features*/
+  .features .content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  .features-items article{
+    display: flex;
+    justify-content:space-around;
+    flex-basis: 33%;
+  }
+
+  .features .features-item-description{
+      flex-basis: 33%;
+  }
+  .features h1{
+    width: 80%;
+  }
+ 
+
+  /*Reviews*/
+
+  .reviews h1 {
+    width: 100%;
+    padding-left: 100px;
+  }
+
+  .reviews img {
+    width: 350px;
+    height: 450px;
+  }
+
+  .content-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row;
+    margin-top: 0;
+  }
+
+  .reviews article div {
+    width: 60%;
+    margin: 100px;
+  }
+
+  .reviews article p {
+    margin: 0;
+  }
+
+/* ==========================================================================
+   About Page
+   ========================================================================== */
+
+   .mission .content-wrapper {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 20px 40px;
+    margin: 0 100px 50px 50px;
+  }
+  .mission .content-wrapper h1 {
+    width: 80%;
+    margin: 0 100px 10px 100px;
+  }
+  .mission-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row;
+  }
+  .mission-content p {
+    width: 35%;
+    margin: 0;
+    padding: 15px;
+  }
+  .contact-wrapper {
+    margin: 0;
+  }
+  .contact-content{
+    margin: 0;
+    width: 100%;
+  }
+  .contact-content h1 {
+    width: 100%;
+    margin: 0 200px;
+  }
+  .mission-contact{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row;
+    width: 100%;
+    margin: 0;
+  }
+
+   /* ==========================================================================
+   FAQ Page
+   ========================================================================== */
+
+  .faq-wrapper h1 {
+    width: 80%;
+  }
+  .faq-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin: 60px;
+  }
+  .faq-wrapper .questions {
+    width: 50%;
+  }
+  .questions {
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+    flex-flow: column wrap;
+    flex-basis: 45%;
+    margin: 20px;
+  }
+  .questions h2, p {
+    margin: 10px;
+  }
 
 }
 /* ==========================================================================
