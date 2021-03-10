@@ -107,18 +107,17 @@ a {
 	color: #e2e3ed;
   text-decoration: none;
 }
-
 h1 {
-  font-size: 3em;
+  font-size: 2.25em;
+
 }
- 
+
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 2.25em;
 }
  
-h3, 
-h4 {
+h3 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.5em;
 }
@@ -141,8 +140,8 @@ address {
 }
 
 .content-wrapper {
-  width: 90%;
-  margin: 50px 0;
+  width: 100%;
+  margin: 20px 0;
 }
    /* -------------- Base Header - Footer Styles End ---------------- */
 
@@ -153,6 +152,11 @@ header, footer {
   align-items: center;
   flex-flow: row wrap;
 }
+
+header {
+  background-color: #202322;
+}
+
 header img {
   width:220px;
 }
@@ -189,6 +193,9 @@ header nav ul {
 }
 
 /*----------- Footer Content Wrapper ----------*/
+footer {
+  background-color: #202322;
+}
 footer .content-wrapper {
   width: 55%;
   margin: 50px 0;
@@ -200,6 +207,7 @@ footer .content-wrapper {
   flex-flow: column;
   align-items: center;
   flex-basis: 50%;
+  color:#fff;
 }
 
 .social{
@@ -208,23 +216,70 @@ footer .content-wrapper {
   align-items: center;
   margin: 20px 0;
   flex-basis: 50%;
+  color:#fff;
 }
 footer .social-icons {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+footer .copyright {
+  color:#fff;
+}
+/*--------------- Input Form Styles  --------------*/
+aside {
+  background-color: #527158;
+  color:#fff;
+}
+aside .form {
+  margin-top: 30px;
+}
+ 
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+ 
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+/*
+.features .content-wrapper {
+  background: ;
+}
+*/
+.reviews .content-wrapper {
+  background-color: #2a423a;
+  color:#fff;
+
+}
 
 /*--------------- Base Header - Footer Styles Ends -------------*/
 
 
 /*--------------- Mobile homepage Styles --------------*/
+header {
+  padding-bottom: 20px;
+}
 
 .hero-area{
   display:flex;
   justify-content:center;
   flex-flow: row wrap;
-  padding: 0 40px 300px 5px;
+  padding: 0 40px 300px 15px;
 }
 
 aside{
@@ -262,9 +317,14 @@ aside{
     flex-flow: row wrap;
 }
 
+.reviews .content-wrapper {
+  margin: 0;
+  padding: 30px 20px;
+}
+
 .reviews {
   display:flex;
-  justify-content:center;
+  justify-content: center;
   flex-flow: row wrap;
 }
 
@@ -276,6 +336,7 @@ aside{
   width: 55%;
   margin: 20px 0;
 }
+
 /*----------- Mobile About Page Styles ----------*/
 
 .mission {
@@ -291,6 +352,9 @@ aside{
   align-items: center;
   flex-flow: row wrap;
   margin: 0 auto;
+}
+.contact-wrapper {
+  background: #2a423a;
 }
 .contact-content h3 {
   padding-left: 100px;
@@ -411,7 +475,7 @@ aside{
 
 @media only screen and (min-width: 768px) {
   .content-wrapper{
-    max-width: 640px;
+    max-width: 768px;
     margin: 100px 0;
   }
 
@@ -421,11 +485,11 @@ aside{
 
   header {
     justify-content:space-around;
-    padding: 33px 0;
   }
   header .content-wrapper{
     width: 100%;
     margin: 0px;
+    padding: 33px;
     justify-content:space-between;
   }
   header nav {
@@ -462,6 +526,14 @@ aside{
   }
 
 /*Features*/
+
+ .features .content-wrapper{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
   .features article{
     display: flex;
     justify-content: space-around;
@@ -473,15 +545,21 @@ aside{
   .features .features-item-description{
       width: 50%;
   }
+
 /*Reviews*/
-  .content-wrapper {
+
+  .reviews .content-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-flow: row;
-    margin-top: 0;
+    flex-flow: row wrap;
+    margin: 0;
   }
-  .reviews h1 {
+  .content-wrapper {
+    width: 100%;
+  }
+
+  .reviews .content-wrapper h1 {
     width: 100%;
     padding-left: 60px;
   }
@@ -489,16 +567,21 @@ aside{
   .reviews img {
     width: 300px;
     height: 400px;
+    padding: 0 0 30px 60px;
   }
-  .reviews article div {
-    width: 60%;
-    margin: 50px;
+  .reviews article{
+    width: 50%;
+    padding-bottom: 150px;
   }
+
   .reviews article p {
     margin: 0;
+    padding-right: 30px;
+    text-align: left;
   }
   
   /*Footer*/
+
   footer .content-wrapper {
     display: flex;
     justify-content: space-between;
@@ -586,8 +669,7 @@ aside{
 @media only screen and (min-width: 1200px) {
 
   .content-wrapper{
-    max-width: 1000px;
-    margin: 100px 0;
+    max-width: 1200px;
   }
 
 /* ==========================================================================
@@ -670,22 +752,31 @@ aside{
 
   /*Reviews*/
 
+  .reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 100%;
+  }
+
   .reviews h1 {
     width: 100%;
     padding-left: 100px;
   }
 
   .reviews img {
-    width: 350px;
-    height: 450px;
+    width: 450px;
+    height: 550px;
   }
 
   .content-wrapper{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-flow: row;
     margin-top: 0;
+    width: 100%;
   }
 
   .reviews article div {
@@ -709,42 +800,44 @@ aside{
     padding: 20px 40px;
     margin: 0 100px 50px 50px;
   }
+
   .mission .content-wrapper h1 {
     width: 80%;
     margin: 0 100px 10px 100px;
   }
+
   .mission-content {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-flow: row;
   }
+
   .mission-content p {
     width: 35%;
     margin: 0;
     padding: 15px;
   }
+
   .contact-wrapper {
     margin: 0;
   }
-  .contact-content{
+
+  .contact-content h1{
     display:flex;
     justify-content: space-evenly;
     align-items: center;
     flex-flow: row wrap;
     width: 100%;
   }
-  .contact-content h1 {
-    width: 80%;
-    margin: 70px 250px;
-  }
+
   .contact-content h3 {
     width: 50%;
     margin: 0;
     padding-right: 100px;
   }
   .mission-contact{
-    padding: 0;
+    margin: 0;
 
   }
 
