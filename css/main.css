@@ -107,9 +107,9 @@ a {
 	color: #e2e3ed;
   text-decoration: none;
 }
-h1 {
-  font-size: 2.25em;
 
+h1 {
+  font-family:'Poppins', sans-serif;
 }
 
 h2 {
@@ -128,11 +128,11 @@ p {
 }
  
 img {
-
+  width: 100%;
 }
 
 figure {
- 
+ margin: 0;
 }
  
 address {
@@ -162,14 +162,15 @@ header img {
 }
 
 .header-divider {
-  width:100%;
-  height: 1px;
+  width: 100%;
+  height: 2px;
   margin: 10px 0 20px 0;
+  color: #fff;
 }
 
 header .content-wrapper{
-  display:flex;
-  justify-content: center;
+  display: flex;
+  justify-content: space-around;
   align-content: center;
   flex-flow: row wrap;
   margin: 0;
@@ -187,9 +188,9 @@ header nav ul {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
-  width: 100%;
-  padding: 0px;
+  padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 /*----------- Footer Content Wrapper ----------*/
@@ -209,6 +210,9 @@ footer .content-wrapper {
   flex-basis: 50%;
   color:#fff;
 }
+.general-contact p {
+  text-align: center;
+}
 
 .social{
   display:flex;
@@ -218,6 +222,10 @@ footer .content-wrapper {
   flex-basis: 50%;
   color:#fff;
 }
+.social p {
+  text-align: center;
+}
+
 footer .social-icons {
     display: flex;
     justify-content: space-around;
@@ -272,14 +280,32 @@ input[type=button] {
 
 /*--------------- Mobile homepage Styles --------------*/
 header {
-  padding-bottom: 20px;
+  padding: 20px 0;
+}
+
+header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 .hero-area{
   display:flex;
   justify-content:center;
   flex-flow: row wrap;
-  padding: 0 40px 300px 15px;
+  color: #fff;
+  margin: 0;
+  background: url('../assets/unplugged-retreat.jpg') center no-repeat #333;
+  background-size: cover;
+}
+.hero-area h1 {
+  display: flex;
+  justify-content: left;
+  color: #fff;
+  margin: 0 20px 300px 20px;
+  font-weight: normal;
 }
 
 aside{
@@ -287,7 +313,11 @@ aside{
   justify-content:center;
   align-items: center;
   flex-flow: row wrap;
-  padding: 30px 30px 55px 50px ;
+  padding: 5px 30px 5px 30px ;
+}
+
+aside .form h3 , aside .form-description h3 {
+  font-weight: normal;
 }
 
 .features {
@@ -295,10 +325,16 @@ aside{
   justify-content:center;
   flex-flow: row wrap;
   padding: 50px 36px 66px 19px;
+  background: url('../assets/gathered-around-campfire.jpg') center no-repeat #333;
+  background-size: cover;
+  color: #fff;
 }
+
 
 .features h2 {
   margin-bottom: 60px;
+  color: #fff;
+  font-weight: normal;
 }
 
 .features article {
@@ -319,7 +355,7 @@ aside{
 
 .reviews .content-wrapper {
   margin: 0;
-  padding: 30px 20px;
+  padding: 30px 10px;
 }
 
 .reviews {
@@ -328,13 +364,26 @@ aside{
   flex-flow: row wrap;
 }
 
-.reviews h2 {
+.reviews img {
+  width: 350px;
+  height: 450px;
+}
+
+.reviews h1 {
   margin-bottom: 40px;
+  font-weight: normal;
 }
 
 .reviews h3 {
   width: 55%;
   margin: 20px 0;
+  font-weight: normal;
+}
+
+footer .content-wrapper p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*----------- Mobile About Page Styles ----------*/
@@ -344,35 +393,40 @@ aside{
   align-items: center;
   flex-flow: row wrap;
   padding: 10px 15px 50px 15px;
+  background-color: #527158;
+  color: #fff;
+}
+
+.contact-wrapper .contact-content {
+  padding: 30px;
+  color: #fff;
 }
 
 .mission-contact {
   display:flex;
-  justify-content:center;
+  justify-content:left;
   align-items: center;
   flex-flow: row wrap;
   margin: 0 auto;
 }
+
 .contact-wrapper {
   background: #2a423a;
-}
-.contact-content h3 {
-  padding-left: 100px;
 }
 
 .mission-contact h2 {
   margin: 0;
   padding: 0px;
 }
-
 /*----------- Mobile FAQ Page Styles -----------*/
 .faq-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    flex-basis: 50%;
-    margin: 50px 20px;
+    flex-basis: 100%;
+    margin:0;
+    background-color: #527158;
 }
 .questions {
   display:flex;
@@ -483,22 +537,26 @@ aside{
    HomePage
    ========================================================================== */
 
-  header {
-    justify-content:space-around;
-  }
   header .content-wrapper{
     width: 100%;
     margin: 0px;
-    padding: 33px;
     justify-content:space-between;
   }
+
   header nav {
     width: 20%;
+    margin-right: 50px;
+  }
+  
+  header img {
+    margin-right: 80px;
   }
 
   header nav ul {
+    display: flex;
     justify-content: space-between;
   }
+  
   .header-divider {
     display: none;
   }
@@ -506,18 +564,26 @@ aside{
   /*Hero Area*/
 
   .hero-area h1 {
-    margin: 0; 
-    text-align: left;
-    width: 80%;
+    display: flex;
+    justify-content: left;
+    flex-flow: row wrap;
+    margin: 30px 0 300px 60px;
+    width: 60%;
+    font-weight: normal;
+  }
+
+  .hero-area .content-wrapper {
+    margin: 0;
   }
 
   /*Aside*/
 
   aside .content-wrapper {
-    margin: 50px 0;
     display: flex;
     justify-content: space-between;
     flex-flow:row;
+    margin: 0;
+    padding: 20px 30px;
   }
   aside .content-wrapper .form-description, 
   aside .content-wrapper .form{
@@ -528,11 +594,16 @@ aside{
 /*Features*/
 
  .features .content-wrapper{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: column wrap;
-}
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column wrap;
+    margin: 0;
+  }
+
+  .features h2 {
+    margin: 10px 20px 30px 40px;
+  }
 
   .features article{
     display: flex;
@@ -543,7 +614,7 @@ aside{
   }
 
   .features .features-item-description{
-      width: 50%;
+    width: 50%;
   }
 
 /*Reviews*/
@@ -555,9 +626,6 @@ aside{
     flex-flow: row wrap;
     margin: 0;
   }
-  .content-wrapper {
-    width: 100%;
-  }
 
   .reviews .content-wrapper h1 {
     width: 100%;
@@ -567,7 +635,7 @@ aside{
   .reviews img {
     width: 300px;
     height: 400px;
-    padding: 0 0 30px 60px;
+    padding: 0 10px 30px 50px;
   }
   .reviews article{
     width: 50%;
@@ -615,6 +683,7 @@ aside{
   flex-flow: row wrap;
   padding: 20px 40px;
   margin: 0;
+  width: 100%;
 }
 .mission-content {
   display: flex;
@@ -680,35 +749,60 @@ aside{
     display:flex;
     justify-content:space-between;
     align-items: center;
-    }
+    width: 100%;
+  }
 
   header {
     justify-content:space-around;
-    padding: 5px 0;
-    }
-    
-  header nav {
-    width: 15%;
-    }
+    padding: 20px 0;
+  }
+
+  header figure {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    margin-right: 80px;
+  }
 
   header nav ul {
-    justify-content: space-between;
-    }
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+  }
 
   .header-divider {
     display: none;
-    }
+  }
 
   /*Hero Area*/
 
   .hero-area {
-    margin: 10px 0;
-    padding: 0 0 150px 100px;
+    margin: 0;
+    padding: 0 0 150px 0px;
     text-align: left;
+    width: 100%;
+    background: url('../assets/unplugged-retreat.jpg') center no-repeat #333;
+    background-size: cover;
+  }
+  .hero-area h1 {
+    display: flex;
+    justify-content: left;
+    flex-flow: row wrap;
     width: 60%;
+    margin: 20px 300px 300px 100px;
+    font-size: 3.25em;
+  }
+  .hero-area .content-wrapper {
+    margin: 0;
   }
 
   /*Aside*/
+
+    aside {
+      padding: 10px;
+    }
 
     aside .content-wrapper {
       margin: 20px 0;
@@ -757,26 +851,21 @@ aside{
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
+  }
+
+  .reviews .content-wrapper {
     width: 100%;
   }
 
   .reviews h1 {
     width: 100%;
-    padding-left: 100px;
+    padding: 0 0px 60px 100px;
+    font-size: 2.25em;
   }
 
   .reviews img {
     width: 450px;
     height: 550px;
-  }
-
-  .content-wrapper{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-flow: row;
-    margin-top: 0;
-    width: 100%;
   }
 
   .reviews article div {
@@ -786,8 +875,8 @@ aside{
 
   .reviews article p {
     margin: 0;
+    font-size: 1.5em;
   }
-
 /* ==========================================================================
    About Page
    ========================================================================== */
@@ -851,7 +940,7 @@ aside{
   .faq-wrapper {
     display: flex;
     justify-content: space-around;
-    margin: 60px;
+    background-color: #527158;
   }
   .faq-wrapper .questions {
     width: 50%;
